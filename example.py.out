@@ -1,0 +1,31 @@
+function = lambda x: (1-x**2)**0.5 # Set function to lambda x: (1-x**2)**0.5
+
+# comment 
+
+print "123" 
+print function # Print value of function
+print 1+v(x)*y**4 # Print result of 1+v(x)*y**4
+print("123") 
+print(function) # Print value of function
+print(1+v(x)*y**4) # Print result of (1+v(x)*y**4)
+
+for i in range(1, 11): # Loop from 1 to 11
+    print i # Print value of i
+
+
+def add_middle_points(L): # Define function add_middle_points
+    ret = [L[0]] # Set ret to [L[0]]
+    for l in L[1:]: # Loop through L[1:]
+        ret+=[(ret[-1]+l)/2.0, l] # Add [(ret[-1]+l)/2.0, l] to ret
+    return ret 
+
+
+iteration = 0 # Set iteration to 0
+points = [0, 1] # Set points to [0, 1]
+while True: # Repeat while True is true
+    iteration += 1 # Increase iteration by one
+    points = add_middle_points(points) # Set points to add_middle_points(points)
+    values = map(function,points) # Set values to map(function,points)
+    slice_width = (1.0 / (len(values)-1)) # Set slice_width to (1.0 / (len(values)-1))
+
+    print sum(map(lambda q: q*slice_width, values))*4 # Print result of sum(map(lambda q: q*slice_width, values))*4
