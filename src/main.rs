@@ -134,7 +134,7 @@ fn generate_comment(mut result: &mut String) {
 
     let re_def = regex!(r"^def\s*?([a-zA-Z_][a-zA-Z0-9_]*)\s*.+?$");
     let re_assign = regex!(r"^([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*(.+?)$");
-    let re_while_true = regex!(r"^while\s+True:$");
+    let re_while_true = regex!(r"^while\s+True\s*:$");
     let re_while = regex!(r"^while\s+(.+)\s*:$");
     let re_for_range = regex!(r"^for.+in\s+range\((.+)\):$");
     let re_for = regex!(r"^for.+in\s+(.+):$");
@@ -160,8 +160,7 @@ fn generate_comment(mut result: &mut String) {
         return;
     }
 
-    let rr_while_true = get_groups(&re_while_true, &inp);
-    if !rr_while_true.is_empty() {
+    if re_while_true.is_match(&inp) {
         result.push_str(&"# Loop forever");
         return;
     }
