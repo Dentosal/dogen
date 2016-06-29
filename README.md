@@ -1,8 +1,15 @@
-A quick readme:
+DoGen - Python Documentation Generator written in rust using mostly poorly written regexes and repetitive copypasta code
 
+Installation
+============
 required: rust 1.8 (or 1.7, cannot remember)
-wont compile with the new nightly, because regex package is broken
+(wont compile with the new nightly, because regex package is broken)
 
-run `cargo run -- example.py` in project folder
+Testing
+=======
+Run `cargo run -- example.py` in project folder.
 
-to be rewritten in python
+
+Roadmap
+=======
+To be rewritten in Python.
