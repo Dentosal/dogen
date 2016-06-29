@@ -1,4 +1,6 @@
-DoGen - Python Documentation Generator written in rust using mostly poorly written regexes and repetitive copypasta code
+DoGen
+=====
+A simple and stupid Python documentation generator written in Rust using mostly poorly written regexes and repetitive copypasta code.
 
 Installation
 ============
